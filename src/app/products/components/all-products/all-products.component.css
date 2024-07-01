@@ -243,3 +243,54 @@ body, html {
     white-space: nowrap;
   }
   
+  .container.page-wrapper {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.row.horizontal-scroll {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 15px; /* تباعد بين العناصر */
+}
+
+.el-wrapper {
+  flex: 0 0 auto; /* حجم ثابت للعناصر */
+  width: 360px; /* عرض العنصر */
+  padding: 15px;
+  background-color: #fff;
+}
+.el-wrapper {
+  flex: 0 0 auto; /* حجم ثابت للعناصر */
+  width: 360px; /* عرض العنصر */
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* اضافة ظل للعناصر */
+  border-radius: 8px; /* اضافة زوايا مستديرة */
+  overflow: hidden; /* تجنب التجاوز خارج الاطار */
+
+  /* تنظيم المحتوى داخل العنصر */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.img-frame {
+  width: 100%; /* حجم الاطار بالنسبة للصورة */
+  height: auto; /* ارتفاع متغير */
+  overflow: hidden; /* تجنب التجاوز خارج الاطار */
+  border-radius: 8px 8px 0 0; /* زوايا مستديرة للجزء العلوي فقط */
+}
+
+.img {
+  width: 100%; /* حجم الصورة بالنسبة للاطار */
+  height: auto; /* ارتفاع متغير */
+  display: block; /* اظهار الصورة بالشكل الصحيح */
+}
+
+.img-info {
+  padding: 15px; /* تباعد بين النص والاطار */
+  background-color: #f7f7f7; /* لون الخلفية للنص */
+  border-radius: 0 0 8px 8px; /* زوايا مستديرة للجزء السفلي فقط */
+}
