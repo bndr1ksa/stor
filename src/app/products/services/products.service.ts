@@ -10,4 +10,9 @@ export class ProductsService {
   getAllproducts(){
     return this.http.get('https://fakestoreapi.com/products')
   }
+  getallcategory(){
+    return this.http.get('https://fakestoreapi.com/products/categories')
+
+  }
+
 }

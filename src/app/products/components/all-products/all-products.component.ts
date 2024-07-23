@@ -9,18 +9,35 @@ import { ProductsService } from '../../services/products.service';
 export class AllProductsComponent {
 
   protects:any[] = []
+  category:any[] = []
+
 
   constructor(private service:ProductsService) {}
   
   ngOnInit(): void {
 
     this.getproducts();
+    this.getacategory();
   }
 
   getproducts(){
     this.service.getAllproducts().subscribe((res:any) => {
     this.protects = res;
-    console.log(this.protects)
-  })
+  } , error => {
+    alert(error.message);
   }
+)
+  }
+
+  getacategory(){
+    this.service.getallcategory().subscribe((res:any) => {
+      this.category = res;
+  }      , error => {
+    alert(error.message);
+  } 
+    )
+}
+
+
+
 }

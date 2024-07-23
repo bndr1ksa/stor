@@ -3,10 +3,11 @@
 
 <label for="" class="my-1">categories :</label>
 <select class="form-control">
-    <option value="1">option 1</option>
-    <option value="2">option 2</option>
-    <option value="3">option 3</option>
-    <option value="4">option 4</option>
+    <option value="all">All</option>
+    
+    @for (item of category; track $index) {
+    <option value="item">{{item}}</option>
+    }
 </select>
 <br>
 <div class="container page-wrapper">
