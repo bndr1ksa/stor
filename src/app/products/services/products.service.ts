@@ -14,5 +14,10 @@ export class ProductsService {
     return this.http.get('https://fakestoreapi.com/products/categories')
 
   }
+  
+  getproductsBycategory(keyword:string){
+    return this.http.get('https://fakestoreapi.com/products/category/'+keyword)
+
+  }
 
 }

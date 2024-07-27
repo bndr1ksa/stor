@@ -2,11 +2,11 @@
 <div class="my-2 w-25"></div>
 
 <label for="" class="my-1">categories :</label>
-<select class="form-control">
+<select class="form-control" (change)="filtercategory($event)">
     <option value="all">All</option>
     
     @for (item of category; track $index) {
-    <option value="item">{{item}}</option>
+      <option [value]="item">{{item}}</option>
     }
 </select>
 <br>

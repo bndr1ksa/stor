@@ -37,7 +37,16 @@ export class AllProductsComponent {
   } 
     )
 }
+filtercategory(event:any){
+  let value = event.target.value;
+  this.getproductscategory(value);
+}
 
+getproductscategory(keyword:string){
+  this.service.getproductsBycategory(keyword).subscribe((res:any) =>{
+    this.protects = res;
+  })
+}
 
 
 }
