@@ -4,11 +4,11 @@
 <label for="" class="my-1">categories :</label>
 <select class="form-control" (change)="filtercategory($event)">
     <option value="all">All</option>
-    
     @for (item of category; track $index) {
       <option [value]="item">{{item}}</option>
     }
 </select>
+    
 <br>
 <div class="container page-wrapper">
     <div class="page-inner">
@@ -43,4 +43,8 @@
             }
         </div>
     </div>
+    <!-- <div class="text-center w-100">
+        <app-spinner></app-spinner>
+    </div> -->
 </div>
+

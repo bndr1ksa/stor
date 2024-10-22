@@ -4,12 +4,14 @@ import { HeaderComponent } from './components/header/header.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 
 
 @NgModule({
   declarations: [
-    HeaderComponent
+    HeaderComponent,
+    SpinnerComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +22,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 
   //هنا وضعت الهيدر اكسبورت لكي استطيع الوصل له من اي مكان
   exports: [
-    HeaderComponent
+    HeaderComponent,
+    SpinnerComponent
   ]
 })
 export class SharedModule { }
